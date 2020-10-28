@@ -7,7 +7,6 @@
         <title>Trivia!</title>
 
         <script>
-        // How do I know what event to add for? I'd need to read up on JS' "document" object (or the addEventListener?)
             document.addEventListener('DOMContentLoaded', function() {
                 console.log("DOMContentLoaded event fired, running script...\n");
 
@@ -21,7 +20,7 @@
                     document.querySelector('#feedback1').innerHTML = "Correct!";
                 });
 
-                // Add event listener to all incorrect buttons
+                // Add event listener to ALL incorrect buttons (note the change in querySelector)
                 let incorrects = document.querySelectorAll('.incorrect');
 
                 for (let i = 0; i < incorrects.length; i++) {
