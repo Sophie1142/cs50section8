@@ -1,0 +1,80 @@
+<!--This version assigns the 'onclick' attribute of the button tags directly within the HTML-->
+<!-- Teaching moment:
+1) the script MUST be defined at the bottom of body if using in-HTML attribute-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        // <script>
+        // // How do I know what event to add for? I'd need to read up on JS' "document" object (or the addEventListener?)
+        //     document.addEventListener('DOMContentLoaded', function() {
+
+        //         function incorrect(s_ID) {
+        //             let button = document.querySelector('#' + s_ID);
+        //             button.style.backgroundColor = 'red';
+        //             document.querySelector('#feedback1').innerHTML = 'Incorrect';
+
+        //         }
+        //         function correct(s_ID) {
+        //             let button = document.querySelector('#' + s_ID);
+        //             button.style.backgroundColor = 'green';
+        //             document.querySelector('#feedback1').innerHTML = 'Correct!';
+
+        //         }
+        //     });
+
+        // </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr> <!-- a horizontal rule that separates content -->
+                <h3> What language is Sophie's citation in?</h3>
+                <button id='b_french' onclick="incorrect('b_french')">French</button>
+                <button id='b_chinese' onclick="correct('b_chinese')">Chinese</button>
+                <button id='b_spanish' onclick="incorrect('b_spanish')">Spanish</button>
+
+                <p id='feedback1'></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+
+            </div>
+
+        </div>
+        //  <script>
+        // How do I know what event to add for? I'd need to read up on JS' "document" object (or the addEventListener?)
+
+            function incorrect(s_ID) {
+                let button = document.querySelector('#' + s_ID);
+                button.style.backgroundColor = 'red';
+                document.querySelector('#feedback1').innerHTML = 'Incorrect';
+
+            }
+            function correct(s_ID) {
+                let button = document.querySelector('#' + s_ID);
+                button.style.backgroundColor = 'green';
+                document.querySelector('#feedback1').innerHTML = 'Correct!';
+
+            }
+
+        </script>
+    </body>
+</html>

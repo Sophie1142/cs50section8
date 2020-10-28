@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // TODO: Add code to check answers to questions
+                // Event handler for French (incorrect answer)
+                let french = document.querySelector('#b_french');
+                // How to know how to use addEventListener function?
+                // HTML DOM -> DOM Element -> Attributes -> addEventListener ->
+                french.addEventListener('click', function() {
+                    french.style.backgroundColor = 'red';
+                    // Note that you want to be in the HTML DOM portion of W3Schools, and through that,
+                    // we find that DOM Elements have attribute "innerHTML"
+                    document.querySelector('#feedback1').innerHTML = "Incorrect";
+                })
+            });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What language is Sophie's citation in?</h3>
+                <button id='b_french'>French</button>
+                <button id='b_chinese'>Chinese</button>
+                <button id='b_spanish'>Spanish</button>
+
+                <p id='feedback1'></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                     <!--TODO-->
+
+
+            </div>
+
+        </div>
+    </body>
+</html>
